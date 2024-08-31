@@ -1,0 +1,21 @@
+create  database books_db;
+use books_db;
+create table book_details(
+id INT primary key ,
+book_title varchar(256) not null,
+book_publisher varchar(256) not null,
+book_isbn varchar(13) unique not null,
+book_no_of_pages int not null,
+book_year int not null);
+
+
+INSERT INTO Book_Details (id, book_title, book_publisher, book_isbn, book_no_of_pages, book_year)
+VALUES 
+(1, 'The Catcher in the Rye', 'Little, Brown and Company', '9780316769488', 277, 1951),
+(2, 'To Kill a Mockingbird', 'J.B. Lippincott & Co.', '9780060935467', 281, 1960),
+(3, '1984', 'Secker & Warburg', '9780451524935', 328, 1949),
+(4, 'Pride and Prejudice', 'T. Egerton', '9780141439518', 279, 1813),
+(5, 'The Great Gatsby', 'Charles Scribner\'s Sons', '9780743273565', 180, 1925);
+
+
+select * from book_details;
